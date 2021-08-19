@@ -61,7 +61,7 @@ album_id integer references album(id)
 Примечание: начальник - тоже сотрудник. Отдел можно хранить строкой, можно идентификатором (не принципиально).
 
 ```
-CREATE DATABASE test WITH OWNER netology; 
+CREATE DATABASE company WITH OWNER netology; 
 
 CREATE TABLE department (
 id serial primary key,
