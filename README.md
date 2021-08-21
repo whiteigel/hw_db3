@@ -42,12 +42,16 @@ artist_id integer references artist(id),
 album_id integer references album(id)
 );
 
-CREATE TABLE Compilation (
+CREATE TABLE Compilation(
 id serial primary key,
-title varchar(80),
-release_date integer,
+title varchar(80) not null, 
+release_date integer not null
+);
+
+CREATE TABLE TrackCompilation (
+id serial primary key,
 track_id integer references track(id),
-album_id integer references album(id)
+compilation_id integer references compilation(id)
 );
 ```
 
